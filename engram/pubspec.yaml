@@ -1,0 +1,80 @@
+name: engram
+description: "Engram — capture anything in seconds, remember it for good."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # --- State Management ---
+  flutter_riverpod: ^2.6.1
+
+  # --- Database (Offline-First) ---
+  # The community fork: upstream `isar` 3.1.0+1 has not been updated since April
+  # 2023 and does not build with AGP 8 (namespace undefined). Same API, maintained.
+  # CAREFUL: the versions are pinned deliberately (NO caret).
+  #   3.3.1 is broken -- libisar.so inside flutter_libs ships Isar Core
+  #     3.2.0-dev.2 while the Dart side wants 3.3.1; it blows up at run time
+  #     with "Incorrect Isar Core version".
+  #   3.3.2 fixes that but needs Dart >=3.9; Flutter 3.32.4 gives Dart 3.8.1.
+  # If Flutter is upgraded, move all three to 3.3.2 together.
+  isar_community: 3.3.0
+  isar_community_flutter_libs: 3.3.0
+  path_provider: ^2.1.5
+
+  # --- Spaced Repetition ---
+  fsrs: ^2.0.1
+
+  # --- Settings ---
+  shared_preferences: ^2.3.0
+
+  # --- Utilities ---
+  cupertino_icons: ^1.0.8
+  intl: any
+  path: ^1.9.0
+  flutter_animate: ^4.5.2
+  camera: ^0.11.2+1
+  record: ^6.2.1
+  just_audio: ^0.10.6
+  video_player: ^2.10.1
+  photo_manager: ^3.11.0
+  file_picker: ^11.0.3
+  pdfx: ^2.9.2
+  image: ^4.8.0
+  flutter_local_notifications: ^20.1.0
+  timezone: ^0.10.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # For the plugin checks under integration_test/ (they run in CI).
+  integration_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+  # --- Isar Schema Code Generation ---
+  build_runner: ^2.4.12
+  isar_community_generator: 3.3.0 # see the note above -- no caret, pinned on purpose
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/images/
+
+  # Variable fonts. Weight is selected with TextStyle.fontVariations('wght'),
+  # not with `weight:`; typography.dart wraps that.
+  fonts:
+    - family: Fraunces
+      fonts:
+        - asset: assets/fonts/Fraunces.ttf
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter.ttf

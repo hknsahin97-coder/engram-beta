@@ -1,0 +1,7 @@
+# Operating system clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python bytecode (tool/generate_icons.py)
+__pycache__/

@@ -1,0 +1,199 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "Engram",
+  "@appTitle": {
+    "description": "Application name. Not translated."
+  },
+
+  "modeCamera": "Camera",
+  "modeText": "Text",
+  "modeImport": "Import",
+  "modeAudio": "Audio",
+  "@modeCamera": {
+    "description": "Capture mode chips at the top of the Add screen."
+  },
+
+  "navAdd": "Add",
+  "navReview": "Review",
+  "navReviewWithCount": "Review · {count}",
+  "@navReviewWithCount": {
+    "description": "Switcher pill label. count is ALWAYS the capped daily suggestion, never the raw overdue total.",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+
+  "textPrompt": "What do you want to remember?",
+  "@textPrompt": {
+    "description": "Large serif placeholder on the Text capture screen. Warm, direct, second person."
+  },
+  "addAnswer": "Add answer",
+  "addNote": "Add note",
+  "optional": "optional",
+  "answerHint": "You can add the answer too",
+  "noteHint": "A short note",
+  "save": "Save",
+  "saveFailed": "That didn't save. Give it another try?",
+  "@saveFailed": {
+    "description": "Shown when writing a captured card fails (disk full, file gone). Warm, never blaming the user."
+  },
+
+  "reviewTapToReveal": "Tap to see the answer",
+  "reviewTapToRemember": "Do you remember?",
+  "@reviewTapToRemember": {
+    "description": "Shown instead of tapToReveal when the card has no answer."
+  },
+  "reviewListenThenReveal": "Listen, then tap to see the answer",
+  "reviewLookThenReveal": "What was in this? Tap to remember",
+
+  "ratingAgain": "No idea",
+  "ratingHard": "Barely",
+  "ratingGood": "Almost",
+  "ratingEasy": "Got it",
+  "@ratingAgain": {
+    "description": "Maps to FSRS Again/Hard/Good/Easy. Short enough for four side-by-side buttons on a 375px screen. Never blaming."
+  },
+
+  "reviewDoneTitle": "That's it for today",
+  "reviewDoneSubtitle": "Nothing else is due",
+  "reviewDoneAction": "Back to capturing",
+  "reviewEmptyTitle": "Nothing to review right now",
+  "reviewEmptySubtitle": "Capture something and it'll show up here.",
+  "reviewEmptyAction": "Start capturing",
+
+  "libraryTitle": "Your cards",
+  "libraryEmptyTitle": "No cards yet",
+  "libraryEmptySubtitle": "Your first capture will show up here.",
+  "libraryStatTotal": "total cards",
+  "libraryStatAccuracy": "accuracy",
+  "libraryStatKnown": "known",
+
+  "cardDetailQuestion": "QUESTION",
+  "cardStatAccuracy": "Accuracy",
+  "cardStatReviews": "Reviews",
+  "cardStatLastSeen": "Last seen",
+  "cardStatNextReview": "Next review",
+
+  "sortNewest": "Newest",
+  "sortWeakest": "Weakest",
+  "sortNextReview": "Next review",
+  "librarySearchHint": "Search your cards",
+  "@librarySearchHint": {
+    "description": "Library search field. Searches the question, the answer and the PDF source label; works alongside the filters."
+  },
+  "filterNoMatch": "Nothing matches this filter",
+  "clearFilters": "Show all cards",
+
+  "neverReviewed": "Not yet",
+  "dueNow": "Ready now",
+  "@neverReviewed": {
+    "description": "Card detail: shown instead of a date when the card has never been reviewed, or when it is already due."
+  },
+
+  "cancel": "Cancel",
+  "deleteAllTitle": "Delete everything?",
+  "deleteAllBody": "This removes every card, every review and your settings from this device. It can't be undone.",
+  "deleteAllConfirm": "Delete everything",
+  "@deleteAllTitle": {
+    "description": "Confirmation before wiping all data. Plain and factual — no guilt, no drama."
+  },
+
+  "privacyBody": "Engram keeps everything on this device. There's no account, no server, no analytics. Nothing you capture leaves your phone.",
+  "aboutBody": "Engram — capture anything in seconds, remember it for good.",
+
+  "levelNew": "New",
+  "levelWeak": "Weak",
+  "levelLearning": "Learning",
+  "levelKnown": "Known",
+
+  "cropSelectArea": "Select area",
+  "cropHintArea": "Drag to select, or keep the whole thing",
+  "cropContinue": "Continue",
+
+  "importRecent": "RECENT PHOTOS AND VIDEOS",
+  "@importRecent": {
+    "description": "Drawer label on the Import panel. Video items carry a play badge."
+  },
+  "importNoPhotos": "Nothing here yet",
+  "recordHint": "Hold to record",
+  "recordReleaseHint": "Let go when you're done",
+  "recordTooShort": "That was too short — hold the button while you talk",
+  "@recordTooShort": {
+    "description": "Shown when a hold-to-record gesture is released almost immediately. Explains the gesture instead of blaming the user."
+  },
+  "importPickPdf": "or pick a PDF",
+  "pdfPageOf": "Page {page} of {count}",
+  "@pdfPageOf": {
+    "placeholders": {
+      "page": { "type": "int" },
+      "count": { "type": "int" }
+    }
+  },
+  "pdfOpenFailed": "That PDF wouldn't open. Try another one?",
+
+  "permAllow": "Allow",
+  "permCameraDenied": "Camera access isn't enabled. You can turn it on in your phone settings.",
+  "permMicDenied": "Microphone access isn't enabled. You can turn it on in your phone settings.",
+  "permPhotosBody": "Let Engram see your photos to turn them into cards.",
+  "@permPhotosBody": {
+    "description": "Shown before the system dialog, in the Import drawer. The camera and microphone have no equivalent: there the shutter itself is the ask."
+  },
+  "permPhotosDenied": "Photo access isn't enabled. You can turn it on in your phone settings.",
+  "@permPhotosDenied": {
+    "description": "Shown after the system dialog was declined — it won't appear a second time, so the text has to point at settings."
+  },
+
+  "settingsReview": "REVIEW",
+  "settingsDailyLimit": "Daily limit",
+  "settingsNotifications": "NOTIFICATIONS",
+  "settingsReminders": "Reminders",
+  "settingsMode": "Mode",
+  "settingsModeDailyTime": "Daily time",
+  "settingsModeThreshold": "When cards pile up",
+  "settingsTime": "Time",
+  "settingsThreshold": "Threshold",
+  "settingsShowCount": "Show card count",
+  "settingsAppearance": "APPEARANCE",
+  "settingsDarkMode": "Dark mode",
+  "themeSystem": "Match device",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "@themeSystem": {
+    "description": "Appearance options. 'Match device' is the default — the app follows the system setting rather than forcing a look."
+  },
+  "settingsOther": "OTHER",
+  "settingsExport": "Export data",
+  "exportDone": "Saved {count} cards to that folder, media included",
+  "@exportDone": {
+    "description": "Confirmation after a manual export. States what left the app so the user can trust the backup.",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "exportFailed": "The export didn't finish. Maybe try a different folder?",
+  "settingsPrivacy": "Privacy",
+  "settingsDeleteAll": "Delete all data",
+  "settingsAbout": "About",
+
+  "dailyLimitHintTitle": "There's more waiting",
+  "dailyLimitHintBody": "Engram keeps each day short on purpose. You can raise the daily limit in settings whenever you like.",
+  "@dailyLimitHintTitle": {
+    "description": "One-time hint shown the first time the user hits the daily cap. Must never imply falling behind."
+  },
+
+  "notifyDailyWithCount": "{count} cards are waiting for you",
+  "@notifyDailyWithCount": {
+    "description": "count is the capped daily suggestion, never the raw overdue total.",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "notifyDailyNoCount": "A few cards are waiting for you",
+  "notifyPileUp": "Your cards have been stacking up",
+  "notifyPermissionDenied": "Reminders need notification permission. You can turn it on in your phone settings.",
+  "notifyComeBack": "Your cards are still here whenever you are",
+  "@notifyComeBack": {
+    "description": "Softer tone, sent once after several days away. Warm, never guilt-inducing."
+  }
+}

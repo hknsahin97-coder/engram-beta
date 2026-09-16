@@ -1,0 +1,10 @@
+# Always LF in the repository; the platform's native form on checkout.
+* text=auto
+
+# Fonts are binary -- git corrupts them if it treats them as text.
+*.ttf binary
+*.otf binary
+
+# Scripts run on macOS or Linux break if they see CRLF.
+*.sh text eol=lf
+gradlew text eol=lf

@@ -1,0 +1,38 @@
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# Isar database files (user data)
+*.isar
+*.isar.lock
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Android
+android/.gradle/
+android/local.properties
+android/captures/
+android/key.properties
+
+# iOS
+ios/.symlinks/
+ios/Pods/
+# NOTE: ios/Runner.xcworkspace/ is deliberately not ignored -- contents.xcworkspacedata
+# is part of the Flutter template and is the file Xcode opens. Only per-user
+# Xcode state should stay out:
+**/xcuserdata/
+
+# macOS
+macos/Pods/
+
+# Code generation (produced by build_runner, not under source control)
+*.g.dart
+*.freezed.dart

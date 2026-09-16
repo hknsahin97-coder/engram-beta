@@ -1,0 +1,15 @@
+# Release signing. Copy this file to `key.properties` and fill it in --
+# `key.properties` is in .gitignore and never enters the repository.
+#
+# You must create the keystore **yourself** (never share the passwords):
+#
+#   keytool -genkey -v -keystore engram-release.jks -storetype JKS \
+#     -keyalg RSA -keysize 2048 -validity 10000 -alias engram
+#
+# Keep the file outside the repository somewhere you back up: lose it and you
+# can never publish an update to the same app again.
+
+storePassword=
+keyPassword=
+keyAlias=engram
+storeFile=C:\yol\engram-release.jks

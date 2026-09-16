@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Adaptive icon (Android 8+). A flat colour ground with a cream card in the
+     foreground, so the mark stays inside the safe area whatever mask the
+     launcher applies; `monochrome` is for the Android 13 themed icon — the
+     system applies its own colour, we only supply the silhouette. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background" />
+    <foreground android:drawable="@mipmap/ic_launcher_foreground" />
+    <monochrome android:drawable="@mipmap/ic_launcher_monochrome" />
+</adaptive-icon>

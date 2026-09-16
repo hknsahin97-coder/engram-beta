@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The ground of the adaptive icon: the brand's terracotta (tokens.dart). -->
+    <color name="ic_launcher_background">#B8684B</color>
+</resources>

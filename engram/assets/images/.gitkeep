@@ -1,0 +1,4 @@
+# git does not track empty folders, but pubspec.yaml declares this one as an
+# asset directory. Without this file, a clean checkout (CI, a borrowed Mac)
+# warns "asset directory doesn't exist".
+# It can be deleted once the first real image is added.

@@ -1,0 +1,13 @@
+Engram bundles two third-party fonts, each under its own licence. The MIT
+licence in LICENSE covers this project's own source; it does not cover these.
+
+  engram/assets/fonts/Fraunces.ttf
+      Fraunces, SIL Open Font License 1.1
+      Full text: engram/assets/fonts/OFL-Fraunces.txt
+
+  engram/assets/fonts/Inter.ttf
+      Inter, SIL Open Font License 1.1
+      Full text: engram/assets/fonts/OFL-Inter.txt
+
+Both are variable fonts, embedded rather than fetched at run time because the
+app is offline-first and makes no network requests.

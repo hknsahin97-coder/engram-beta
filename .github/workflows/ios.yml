@@ -1,0 +1,56 @@
+name: iOS
+
+# Checks that the project still builds for iOS. It runs on changes that can
+# affect the iOS build -- the ios/ folder and the dependencies -- and on demand.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'engram/ios/**'
+      - 'engram/pubspec.yaml'
+      - 'engram/pubspec.lock'
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: iOS build
+    runs-on: macos-15
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: engram
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Pinned: a different Flutter version resolves different plugin versions.
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.32.4'
+          channel: stable
+          cache: true
+
+      - name: Environment
+        run: |
+          flutter --version
+          xcodebuild -version
+          pod --version
+
+      - name: Dependencies
+        run: flutter pub get
+
+      # Generated code (*.g.dart) is not committed; it is produced here.
+      - name: Generate the Isar schema
+        run: dart run build_runner build --delete-conflicting-outputs
+
+      - name: Analyze
+        run: flutter analyze
+
+      # CocoaPods resolution, deployment target compatibility and Isar
+      # xcframework linking are all exercised here.
+      - name: iOS build (unsigned)
+        run: flutter build ios --debug --no-codesign
